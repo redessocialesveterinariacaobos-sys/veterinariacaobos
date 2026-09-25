@@ -1,0 +1,38 @@
+:root {
+  --mint: #14b8a6;
+  --mint-deep: #0f766e;
+  --mint-ink: #115e59;
+  --mint-soft: #e7f8f5;
+  --peach: #ff8a4a;
+  --peach-hover: #ff7630;
+  --sun: #f6d365;
+  --sun-soft: #fff6d6;
+  --sky: #7dd3fc;
+  --sky-soft: #e0f2fe;
+  --rose: #fda4af;
+  --rose-soft: #ffe4e6;
+  --ink: #16332f;
+  --ink-soft: #5c706c;
+  --line: rgba(15, 118, 110, 0.12);
+  --white: #ffffff;
+  --bg: #f4f6f6;
+  --ice: #f4fbf9;
+  --footer: #0b3b36;
+  --cross: #e30613;
+  --whatsapp: #25d366;
+  --shadow: 0 18px 50px rgba(15, 80, 72, 0.08);
+  --shadow-soft: 0 10px 24px rgba(15, 80, 72, 0.05);
+  --radius: 24px;
+  --font: 'Nunito', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --display: 'Nunito', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --page-pad: clamp(24px, 5vw, 72px);
+  --container: min(1440px, 100%);
+  --header: 84px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --header: 72px;
+  }
+}

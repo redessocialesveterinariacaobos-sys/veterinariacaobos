@@ -1,0 +1,13 @@
+@media (prefers-reduced-motion: reduce) {
+  .hero__draw,
+  .hero__cutout,
+  .hero__photo,
+  .hero__pet,
+  .hero__pets,
+  .hero__heart,
+  .hero__paw,
+  .about__spark,
+  .about__jump {
+    animation: none;
+  }
+}
