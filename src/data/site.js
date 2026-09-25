@@ -7,7 +7,7 @@ export const SITE = {
   tagline: 'Cuidado cercano y de confianza para tu mascota',
   instagram: 'https://www.instagram.com/veterinariacaobos',
   instagramHandle: '@veterinariacaobos',
-  whatsapp: '',
+  whatsapp: '573195949904',
   phone: '3195949904',
   phoneLabel: '319 594 9904',
   address: 'Calle 19 #0e-42, Los Caobos, Cúcuta',

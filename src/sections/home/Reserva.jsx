@@ -4,7 +4,6 @@ import { Reveal } from '../../components/Reveal.jsx';
 import { SERVICES } from '../../data/content.js';
 import { reelFile } from '../../lib/reels.js';
 import { composeAppointmentMessage, getContactLink, SITE } from '../../data/site.js';
-import { createAppointment, loadAppointments, saveAppointments } from '../../lib/agenda.js';
 
 const HOSPITAL_VIDEO = reelFile('https://www.instagram.com/reel/DXaQbasgYv-/');
 
@@ -43,26 +42,15 @@ const INITIAL = {
 
 export function Reserva() {
   const [form, setForm] = useState(INITIAL);
-  const [message, setMessage] = useState('');
 
   const onChange = (event) => {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
   };
 
-  const onSubmit = async (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
-    const text = composeAppointmentMessage(form);
-    saveAppointments([createAppointment(form, 'web'), ...loadAppointments()]);
-    setMessage(text);
-
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch {
-      // El usuario todavía puede copiar el texto del recuadro.
-    }
-
-    window.open(getContactLink(text), '_blank', 'noopener,noreferrer');
+    window.location.assign(getContactLink(composeAppointmentMessage(form)));
   };
 
   return (
@@ -130,12 +118,6 @@ export function Reserva() {
             <button className="btn btn--peach" type="submit">
               Enviar solicitud
             </button>
-            {message ? (
-              <div className="form-success">
-                <strong>Mensaje listo.</strong> Si no se abrió el chat, cópialo y envíalo por Instagram.
-                <textarea readOnly value={message} />
-              </div>
-            ) : null}
           </form>
         </Reveal>
         </div>
