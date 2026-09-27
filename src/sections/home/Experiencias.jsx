@@ -46,13 +46,6 @@ const SLIDES = [
     alt: 'Alma, una chihuahua, saliendo de su baño',
   },
   {
-    key: 'clientes',
-    kind: 'photo',
-    src: '/assets/images/exp-clientes.png',
-    caption: 'Clientes felices',
-    alt: 'Dueña con su perrita en la sala de espera',
-  },
-  {
     key: 'visita',
     kind: 'photo',
     src: '/assets/images/exp-visita.png',
